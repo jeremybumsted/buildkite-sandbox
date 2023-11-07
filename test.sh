@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "+++"
+echo "+++ "
 echo "--- HYDRATION"
 echo "Hydrating Llamas"
 echo "--- TESTING"
