@@ -1,0 +1,7 @@
+steps:
+  - command: ./test.sh
+    label: "Test the Thing"
+  - command: ./build.sh
+    label: "Build The Thing"
+  - command: ./deploy.sh
+    label: "Deploy The Thing"
