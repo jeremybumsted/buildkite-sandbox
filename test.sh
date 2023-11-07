@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "+++"
-echo "~~~ HYDRATION"
+echo "+++ HYDRATION"
 echo "Hydrating Llamas"
-echo "~~~ TESTING"
+echo "--- TESTING"
 echo "Testing Llamas"
 echo "+++ RESULTS"
 echo "The results of the tests on the Llamas"
