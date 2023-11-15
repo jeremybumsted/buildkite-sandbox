@@ -1,7 +1,4 @@
 steps:
-  - command: ./test.sh
-    label: "Test the Thing"
-  - command: ./build.sh
-    label: "Build The Thing"
-  - command: ./deploy.sh
-    label: "Deploy The Thing"
+  - commands:
+      - export VERSION=$(echo "1.2.3")
+      - echo $$VERSION
