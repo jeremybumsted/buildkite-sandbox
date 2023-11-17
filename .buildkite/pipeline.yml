@@ -1,4 +1,3 @@
 steps:
   - command: test.sh
-    concurrency: 2
-    concurrency_group: sandbox-tests
+    paralellism: 2
