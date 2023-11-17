@@ -1,4 +1,4 @@
 steps:
   - commands:
-      - export VERSION=$(echo "1.2.3")
+      - VERSION=$(echo "1.2.34")
       - echo $$VERSION
