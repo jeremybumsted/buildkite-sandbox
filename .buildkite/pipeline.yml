@@ -1,3 +1,3 @@
 steps:
   - command: test.sh
-    paralellism: 2
+    parallelism: 2
