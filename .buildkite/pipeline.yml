@@ -3,6 +3,7 @@ steps:
     label: ":go: :python: :test_tube:"
     plugins:
       - test-collector#v1.10.0:
-          files: "*/junit-*.xml"
+          files: "app/junit-*.xml"
           format: "junit"
+          debug: true
       
