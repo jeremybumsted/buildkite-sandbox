@@ -1,3 +1,11 @@
-
 steps:
-  - command: echo "Hello :buildkite:"
+  - command: pytest
+    label: ":snake: :test_tube:"
+
+  - command: gotestsum --junitfile junit.xml ./...
+    label: ":go: :test_tube:"
+    plugins:
+      - test-collector#v1.10.0:
+          files: "go/junit-*.xml"
+          format: "junit"
+      
