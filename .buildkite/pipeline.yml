@@ -2,7 +2,7 @@ steps:
   - command: pytest
     label: ":snake: :test_tube:"
 
-  - command: cd go && gotestsum --junitfile junit.xml go/...
+  - command: cd app && gotestsum --junitfile junit.xml ./...
     label: ":go: :test_tube:"
     plugins:
       - test-collector#v1.10.0:
