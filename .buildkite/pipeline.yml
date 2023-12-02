@@ -1,9 +1,3 @@
 steps:
-  - command: make 
-    label: ":go: :python: :test_tube:"
-    plugins:
-      - test-collector#v1.10.0:
-          files: "app/junit*.xml"
-          format: "junit"
-          debug: true
-      
+  - command: buildkite-agent artifact upload example1.txt example.txt
+  - command: buildkite-agent artifact upload example2.txt example.txt
