@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-NOTIFY=$(cat ./buildkite.json)
+NOTIFY=$(cat ./notify.json)
 
 export SLACK_USER=$1
 export SLACK_MESSAGE="Hello yes it is I, a notification from Buildkite!"
