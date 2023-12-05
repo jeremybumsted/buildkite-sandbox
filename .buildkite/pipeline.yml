@@ -1,2 +1,2 @@
 steps:
-  - command: ./notification.sh
+  - command: ./notification.sh jeremy
