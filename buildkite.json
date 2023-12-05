@@ -1,0 +1,12 @@
+[
+    {
+      "slack": {
+        "channels": [
+          "jeremy-test#test-notifications"
+        ],
+        "message": "@$SLACK_USER: $SLACK_MESSAGE"
+      }
+    }
+]
+    
+    
