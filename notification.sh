@@ -2,10 +2,18 @@
 
 set -euo pipefail
 
-NOTIFY=$(cat ./notify.json)
 
-export SLACK_USER=$1
-export SLACK_MESSAGE="Hello yes it is I, a notification from Buildkite!"
+SLACK_USER=$1
+SLACK_MESSAGE="Hello yes it is I, a notification from Buildkite!"
 
 
-buildkite-agent step update "notify" "${NOTIFY}" --debug-http --debug --step "${BUILDKITE_STEP_ID}" --append
+buildkite-agent step update "notify" "[
+    {
+      "slack": {
+        "channels": [
+          "jeremy-test#test-notifications"
+        ],
+        "message": "@${SLACK_USER}: ${SLACK_MESSAGE}"
+      }
+    }
+]" --debug-http --debug --step "${BUILDKITE_STEP_ID}" --append
