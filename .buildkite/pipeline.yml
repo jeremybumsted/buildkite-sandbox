@@ -1,4 +1,4 @@
 steps:
   - command: "sleep 20"
-    label: "snooze"
+    label: ":buildkite: snooze"
     parallelism: 5
