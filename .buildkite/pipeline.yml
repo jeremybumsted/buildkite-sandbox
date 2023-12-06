@@ -1,3 +1,4 @@
 steps:
-  - command: echo "Hello World"
+  - command: echo "sleep 20"
+    label: "snooze"
     parallelism: 5
