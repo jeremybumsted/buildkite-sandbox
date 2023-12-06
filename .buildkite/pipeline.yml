@@ -1,2 +1,3 @@
 steps:
-  - command: ./artifacts.sh
+  - command: echo "Hello World"
+    parallelism: 5
