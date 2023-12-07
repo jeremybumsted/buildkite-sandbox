@@ -1,4 +1,4 @@
 steps:
-  - command: "sleep 20"
+  - command: "sleep 5 && echo hi"
     label: ":buildkite: snooze"
     parallelism: 5
