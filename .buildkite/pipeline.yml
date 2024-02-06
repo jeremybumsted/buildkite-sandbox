@@ -14,9 +14,10 @@ steps:
             value: "no"
     depends_on: "hello"
 
-  - command: |
+  - label: "Upload Regression Test Steps"
+    command: |
       if [ "$(buildkite-agent meta-data get "regression")" == "yes" ];
       then
-        echo "Upload regression test steps"
+        buildkite-agent pipeline upload regression.yml
       fi
     depends_on: "blocker"
