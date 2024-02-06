@@ -1,4 +1,4 @@
 steps:
   - label: "Visual Regression Tests"
     command: echo "run regression tests"
-    if: build.env("REGRESSION_TEST")
+    if: build.env("REGRESSION_TEST") == "true"
