@@ -16,6 +16,7 @@ steps:
 
   - command: |
       if [$(buildkite-agent meta-data get "regression") == "yes"];
+      then
         echo "Upload regression test steps"
       fi
     depends_on: "blocker"
