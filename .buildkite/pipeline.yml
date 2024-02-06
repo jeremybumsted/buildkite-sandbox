@@ -15,7 +15,7 @@ steps:
     depends_on: "hello"
 
   - command: |
-      if [$(buildkite-agent meta-data get "regression") == "yes"];
+      if [ "$(buildkite-agent meta-data get "regression")" == "yes" ];
       then
         echo "Upload regression test steps"
       fi
