@@ -2,17 +2,18 @@ steps:
   - command: echo "Hello World"
     key: "hello"
 
-  - key: "blocker"
+  - key: "regression"
     block: "Run Visual Regression Test?"
     prompt: "Do you want to run the visual regression test?"
     options:
-      - "yes"
-      - "no"
-    value: "regression"
+      label: "yes"
+      value: "yes"
+      label: "no"
+      value: "no"
     depends_on: "hello"
 
   - command: |
       if [$(buildkite-agent meta-data get "regression") == "yes"];
-        buildkite-agent pipeline upload regression-test.yml
+        echo "Upload regression test steps"
       fi
-    depends_on: "blocker"
+    depends_on: "regression"
