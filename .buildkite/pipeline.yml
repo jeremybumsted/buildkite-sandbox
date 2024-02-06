@@ -6,8 +6,9 @@ steps:
     block: "Run Visual Regression Test?"
     fields:
       - key: "regression"
-      - hint: "Do you want to run the visual regression test?"
+      - select: "Run regression test?"
       - options:
+
         label: "yes"
         value: "yes"
         label: "no"
