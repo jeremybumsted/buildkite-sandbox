@@ -1,3 +1,4 @@
 steps:
-  - label: "Regression Tests"
-    command: echo "Regression Tests"
+  - label: "Visual Regression Tests"
+    command: echo "run regression tests"
+    if: build.env("REGRESSION_TEST")
