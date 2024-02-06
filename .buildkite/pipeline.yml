@@ -1,32 +1,18 @@
 steps:
-  - name: ":python: Tests"
-    agents:
-      queue: "elastic-green"
-    command: "./ci/tests.sh"
-    plugins:
-    - github.com/buildkite-plugins/docker-login-buildkite-plugin#v2.0.1:
-        server: "gcr.io"
-        username: "_json_key"
-        password-env: "GCR_PASSWORD"
-    - github.com/buildkite-plugins/docker-compose-buildkite-plugin#v3.0.3:
-        env:
-        - "OPENAI_API_KEY"
-        run: "app"
-        config: "docker-compose.buildkite.yml"
-    artifact_paths: ".coverage"
-    timeout_in_minutes: 20
-  - wait
-  - env:
-      DOCKER_BUILDKIT: "1"
-      BUILDKIT_PROGRESS: "plain"
-    name: ":docker: Build Production"
-    agents:
-      queue: "docker-builder-green"
-    command: "./ci/build-production-image.sh"
-    plugins:
-    - github.com/buildkite-plugins/docker-login-buildkite-plugin#v2.0.1:
-        server: "gcr.io"
-        username: "_json_key"
-        password-env: "GCR_PASSWORD"
-    artifact_paths: "*.log"
-    timeout_in_minutes: 20
+  - command: echo "Hello World"
+    key: "hello"
+
+  - key: "blocker"
+    block: "Run Visual Regression Test?"
+    prompt: "Do you want to run the visual regression test?"
+    options:
+      - "yes"
+      - "no"
+    value: "regression"
+    depends_on: "hello"
+
+  - command: |
+    if [$(buildkite-agent meta-data get "regression") == "yes"];
+      buildkite-agent pipeline upload regression-test.yml
+    fi
+    depends_on: "blocker"
