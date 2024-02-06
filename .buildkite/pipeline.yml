@@ -12,7 +12,7 @@ steps:
     depends_on: "hello"
 
   - command: |
-    if [$(buildkite-agent meta-data get "regression") == "yes"];
-      buildkite-agent pipeline upload regression-test.yml
-    fi
+      if [$(buildkite-agent meta-data get "regression") == "yes"];
+        buildkite-agent pipeline upload regression-test.yml
+      fi
     depends_on: "blocker"
