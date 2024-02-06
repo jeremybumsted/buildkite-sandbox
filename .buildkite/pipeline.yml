@@ -18,6 +18,6 @@ steps:
     command: |
       if [ "$(buildkite-agent meta-data get "regression")" == "yes" ];
       then
-        buildkite-agent pipeline upload regression.yml
+        buildkite-agent pipeline upload .buildkite/regression.yml
       fi
     depends_on: "blocker"
