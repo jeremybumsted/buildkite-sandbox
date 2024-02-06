@@ -8,10 +8,10 @@ steps:
       - select: "Run regression test?"
         key: "regression"
         options:
-          label: "yes"
-          value: "yes"
-          label: "no"
-          value: "no"
+          - label: "yes"
+            value: "yes"
+          - label: "no"
+            value: "no"
     depends_on: "hello"
 
   - command: |
