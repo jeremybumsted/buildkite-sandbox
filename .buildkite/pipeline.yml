@@ -5,14 +5,13 @@ steps:
   - key: "blocker"
     block: "Run Visual Regression Test?"
     fields:
-      - key: "regression"
       - select: "Run regression test?"
-      - options:
-
-        label: "yes"
-        value: "yes"
-        label: "no"
-        value: "no"
+        key: "regression"
+        options:
+          label: "yes"
+          value: "yes"
+          label: "no"
+          value: "no"
     depends_on: "hello"
 
   - command: |
