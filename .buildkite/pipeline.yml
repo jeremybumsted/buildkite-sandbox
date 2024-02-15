@@ -1,15 +1,7 @@
 steps:
-  - key: "blocker"
-    block: "Run Visual Regression Test?"
-    fields:
-      - select: "Run regression test?"
-        key: "regression"
-        options:
-          - label: "yes"
-            value: "true"
-          - label: "no"
-            value: "false"
-
-  - label: ":pipeline: pipeline upload"
-    command: REGRESSION_TEST=$(buildkite-agent meta-data get "regression") buildkite-agent pipeline upload .buildkite/regression.yml
+  - plugins:
+    - /Users/jeremy/dev/plugins/snyk-buildkite-plugin#snyk-mvp:
+        scan: 'oss'
+        token-env: 'BUILDKITE_SNYK_TOKEN'
+      
 
