@@ -1,7 +1,9 @@
 steps:
-  - plugins:
+  - label: ":snyk: So Snyky!"
+    plugins:
     - /Users/jeremy/dev/plugins/snyk-buildkite-plugin#snyk-mvp:
-        scan: 'oss'
+        scan: 'container'
         token-env: 'BUILDKITE_SNYK_TOKEN'
+        image: 'alpine'
       
 
