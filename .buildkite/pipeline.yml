@@ -1,9 +1,6 @@
 steps:
-  - label: ":snyk: So Snyky!"
+  - label: ":buildkite:"
+    command: simple-command
     plugins:
-    - /Users/jeremy/dev/plugins/snyk-buildkite-plugin#snyk-mvp:
-        scan: 'container'
-        token-env: 'BUILDKITE_SNYK_TOKEN'
-        image: 'alpine'
-      
-
+      - /Users/jeremy/dev/plugins/forks/library-example-buildkite-plugin#master:
+          foo: 42
