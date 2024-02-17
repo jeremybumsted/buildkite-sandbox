@@ -4,3 +4,10 @@ steps:
     plugins:
       - /Users/jeremy/dev/plugins/forks/library-example-buildkite-plugin#master:
           foo: 42
+
+  - label: ":buildkite:"
+    command: simple-command
+    plugins:
+      - /Users/jeremy/dev/plugins/forks/library-example-buildkite-plugin#master: ~
+
+      
