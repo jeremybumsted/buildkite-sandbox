@@ -13,4 +13,4 @@ EOF
 
 cat "${annotation}"
 
-buildkite-agent annotation "${annotation}" --style success --ctx "success-ctx"
+buildkite-agent annotate "${annotation}" --style success --ctx "success-ctx"
