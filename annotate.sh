@@ -3,8 +3,7 @@ value=$2
 
 
 annotation=$(cat << EOF
-    # Hello ${name}
-    See the Results [${value}](https://google.com)
+   <pre>hello ${name} your number is ${value}</pre>
 EOF
 )
 
