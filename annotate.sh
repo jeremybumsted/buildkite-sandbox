@@ -3,13 +3,8 @@ value=$2
 
 
 annotation=$(cat << EOF
-    <!DOCTYPE html>
-    <h1>Hello ${name} :buildkite:<h1>
-    <div>
-    <p>See some results below!</p>
-    <a href="https://google.com">${value}</a>
-    </div>
-    </html>
+    # Hello ${name}
+    See the Results [${value}](https://google.com)
 EOF
 )
 
