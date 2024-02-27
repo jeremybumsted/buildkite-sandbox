@@ -3,7 +3,10 @@ value=$2
 
 
 annotation=$(cat << EOF
-   <pre><h1>hello ${name} your number is ${value}</h1></pre>
+   <pre>
+   <h2>hello ${name} your number is ${value}</h2>
+   <a href="https://google.com">Find the solution to your problem here</a>
+   </pre>
 EOF
 )
 
