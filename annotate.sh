@@ -3,7 +3,7 @@ value=$2
 
 
 annotation=$(cat << EOF
-   <pre>hello ${name} your number is ${value}</pre>
+   <pre><h1>hello ${name} your number is ${value}</h1></pre>
 EOF
 )
 
