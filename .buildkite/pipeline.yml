@@ -1,3 +1,5 @@
 steps:
   - label: "annotate"
     command: ./annotate.sh jeremy 3
+    agents:
+      queue: "vault"
