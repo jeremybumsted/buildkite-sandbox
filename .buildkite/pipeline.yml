@@ -10,5 +10,5 @@ steps:
   - command: uname -a
     plugins:
       - <<: *docker
-        docker#v5.0.0:
-          image: ubuntu
+          docker#v5.0.0:
+            image: ubuntu
