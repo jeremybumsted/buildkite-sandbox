@@ -1,13 +1,13 @@
 #!/bin/bash
 
-terraform plan -out=plan.log
+terraform plan -out=logs/plan.log -raw
 
 echo "<h4>Terraform plan</h4>" > plan.html
 echo '<details><summary>Terraform plan</summary>' >> plan.html
 echo '<div><code><pre class="term">' >> plan.html
 
 echo "~~~ doing the terminal thing"
-cat plan.log | terminal-to-html >> plan.html
+cat logs/plan.log | terminal-to-html >> plan.html
 echo '</pre></code></div></details>' >> plan.html
 
 echo "~~~ here is the html"
