@@ -1,6 +1,6 @@
 #!/bin/bash
 
-terraform plan -out=logs/plan.log -raw
+terraform plan -out=logs/plan.log 
 
 echo "<h4>Terraform plan</h4>" > plan.html
 echo '<details><summary>Terraform plan</summary>' >> plan.html
