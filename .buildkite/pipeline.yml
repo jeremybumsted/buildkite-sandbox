@@ -1,5 +1,2 @@
 steps:
-  command:
-    - cd /Users/jeremy/dev/buildkite-tf
-    - terraform plan -out="${BUILDKITE_BUILD_CHECKOUT_PATH}"/plan.log
-    - ./terraform.sh
+  - command: ./terraform.sh
