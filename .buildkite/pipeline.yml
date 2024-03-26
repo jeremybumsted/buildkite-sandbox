@@ -1,14 +1,5 @@
-common:
-  - docker_plugin: &docker
-      docker#v3.0.0:
-        image: alpine
-
 steps:
-  - command: uname -a
-    plugins:
-      - *docker 
-  - command: uname -a
-    plugins:
-      - <<: *docker
-          docker#v5.0.0:
-            image: ubuntu
+  command:
+    - cd /Users/jeremy/dev/buildkite-tf
+    - terraform plan -out="${BUILDKITE_BUILD_CHECKOUT_PATH}"/plan.log
+    - ./terraform.sh
