@@ -2,7 +2,6 @@
 
 annotation=$(cat << EOF
    <h4>terraform/aws-eu Terraform plan</h4>
-   <details><summary>Terraform plan</summary>
    \`\`\`term
    Terraform used the selected providers to generate the following execution
    plan. Resource actions are indicated with the following symbols:
@@ -244,7 +243,6 @@ annotation=$(cat << EOF
    [1mPlan:[0m 6 to add, 10 to change, 0 to destroy.
    [0m
    \`\`\`
-   </details>
 EOF
 )
 
