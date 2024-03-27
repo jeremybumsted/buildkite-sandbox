@@ -6,7 +6,7 @@ cat plan.log
 project=${BUILDKITE_PIPELINE_SLUG}
 code_fence="\`\`\`"
 
-planAnnotationFile="plan.html"
+planAnnotationFile="plan"
 cat > "$planAnnotationFile" <<EOF
     <h3>Terraform Plan</h3>
     Here is the plan:
