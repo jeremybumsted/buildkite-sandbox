@@ -14,7 +14,7 @@ EOF
 
 printf '%b\n' "$(cat $planAnnotationFile)" | buildkite-agent annotate \
     --style "info" \
-    -- context "ctx-plan-$project"
+    --context "ctx-plan-$project"
 
     # buildkite-agent annotate \
     #   --style "info" \
