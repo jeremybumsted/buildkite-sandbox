@@ -1,3 +1,3 @@
 steps:
   - command: ./terraform.sh
-    artifact_paths: "logs/*"
+    artifact_paths: "*.log"
