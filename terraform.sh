@@ -1,6 +1,7 @@
 #!/bin/bash
 
-terraform plan -out=plan.log 
+terraform plan > plan.log
+
 project=${BUILDKITE_PIPELINE_SLUG}
 
 code_fence='```'
