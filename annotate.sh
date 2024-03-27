@@ -246,8 +246,8 @@ EOF
 html_body=$(echo "$body" | terminal-to-html)
 
 annotation=$(cat << EOF
-
-   <details><summary>YOLO</summary>
+   <h3>Plan Output</h3>
+   <details><summary>Plan Summary</summary>
    <pre class="term"><code>
    ${html_body}
    </code></pre></details>
