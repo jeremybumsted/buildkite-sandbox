@@ -7,11 +7,15 @@ project=${BUILDKITE_PIPELINE_SLUG}
 
 planAnnotationFile="plan.html"
     cat > "$planAnnotationFile" <<- EOF
-        <pre class="term">
-        <code>Hello</code>
-        </pre>
+        \`\`\`term
+        This is a \033[0;31mtest\033[0m\n
+        \`\`\`
 EOF
 
-    buildkite-agent annotate \
-      --style "info" \
-      --context "ctx-plan-$project" < "$planAnnotationFile"
+printf '%b\n' "$(cat $planAnnotationFile)" | buildkite-agent annotate \
+    --style "info" \
+    -- context "ctx-plan-$project"
+
+    # buildkite-agent annotate \
+    #   --style "info" \
+    #   --context "ctx-plan-$project" < "$planAnnotationFile"
