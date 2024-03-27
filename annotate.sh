@@ -1,6 +1,8 @@
 #!/bin/bash
 
 annotation=$(cat << EOF
+
+   <pre class="term"><code>
    \`\`\`term
    Terraform used the selected providers to generate the following execution
    plan. Resource actions are indicated with the following symbols:
@@ -242,6 +244,7 @@ annotation=$(cat << EOF
    [1mPlan:[0m 6 to add, 10 to change, 0 to destroy.
    [0m
    \`\`\`
+   </code></pre>
 EOF
 )
 
