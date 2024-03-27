@@ -6,10 +6,10 @@ cat plan.log
 project=${BUILDKITE_PIPELINE_SLUG}
 
 planAnnotationFile="plan.html"
-    cat > "$planAnnotationFile" <<-MARKDOWN
-        ### Checking out this plan
+    cat > "$planAnnotationFile" <<MARKDOWN
+        ###Checking out this plan
         \`\`\`term
-        $(cat plan.log)
+            $(cat plan.log)
         \`\`\`
 MARKDOWN
 
