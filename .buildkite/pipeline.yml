@@ -1,3 +1,4 @@
 steps:
-  - command: ./terraform.sh
-    artifact_paths: "*.log"
+  - command: |
+      terraform plan out=plan.out
+      ruby tf.rb
