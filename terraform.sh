@@ -6,13 +6,11 @@ cat plan.log
 project=${BUILDKITE_PIPELINE_SLUG}
 
 planAnnotationFile="plan.html"
-    cat > "$planAnnotationFile" <<MARKDOWN
+    cat > "$planAnnotationFile" <<- EOF
         <pre class="term">
-            <code>
-            Hello
-            </code>
+        <code>Hello</code>
         </pre>
-MARKDOWN
+EOF
 
     buildkite-agent annotate \
       --style "info" \
