@@ -1,4 +1,2 @@
 steps:
-  - command: |
-      terraform plan out=plan.out
-      ruby tf.rb
+  - command: ruby tf.rb
