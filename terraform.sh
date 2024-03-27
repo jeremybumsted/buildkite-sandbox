@@ -7,7 +7,9 @@ project=${BUILDKITE_PIPELINE_SLUG}
 
 planAnnotationFile="plan.html"
     cat > "$planAnnotationFile" <<- EOM
-        $(terminal-to-html < plan.log)
+        <pre>
+        <code>$(terminal-to-html < plan.log)</code>
+        <pre>
 EOM
 
     buildkite-agent annotate \
