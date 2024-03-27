@@ -1,2 +1,2 @@
 steps:
-  - command: ruby tf.rb
+  - command: ./terraform.sh

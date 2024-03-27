@@ -6,7 +6,7 @@ cat plan.log
 project=${BUILDKITE_PIPELINE_SLUG}
 code_fence="\`\`\`"
 
-planAnnotationFile="plan.html"
+planAnnotationFile="plan.md"
 cat > "$planAnnotationFile" <<EOF
     ${code_fence}term
     This is a \033[0;31mtest\033[0m
