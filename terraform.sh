@@ -5,13 +5,9 @@ cat plan.log
 
 project=${BUILDKITE_PIPELINE_SLUG}
 
-code_fence="\`\`\`"
-
 planAnnotationFile="plan.html"
     cat > "$planAnnotationFile" <<- EOM
-        ${code_fence}term
-        $(cat plan.log)
-        ${code_fence}
+        $(terminal-to-html < plan.log)
 EOM
 
     buildkite-agent annotate \
