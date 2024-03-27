@@ -1,2 +1,2 @@
 steps:
-  - command: ./terraform.sh
+  - command: ./annotate.sh
