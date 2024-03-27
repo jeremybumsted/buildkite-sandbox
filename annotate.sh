@@ -3,7 +3,7 @@
 annotation=$(cat << EOF
 
    <details><summary>YOLO</summary>
-   \`\`\`term
+   <pre class="term"><code>
    Terraform used the selected providers to generate the following execution
    plan. Resource actions are indicated with the following symbols:
    [32m+[0m create[0m
@@ -243,7 +243,6 @@ annotation=$(cat << EOF
       }
    [1mPlan:[0m 6 to add, 10 to change, 0 to destroy.
    [0m
-   \`\`\`
    </code></pre></details>
 EOF
 )
