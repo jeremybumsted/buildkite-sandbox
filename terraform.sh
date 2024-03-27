@@ -5,7 +5,7 @@ cat plan.log
 
 project=${BUILDKITE_PIPELINE_SLUG}
 code_fence="\`\`\`"
-tfplan=$(cat <<EOF
+tfplan=$(cat <<-EOF
     ${code_fence}term
         \x1b[31mFailure/Error:\x1b[0m \x1b[32mexpect\x1b[0m(new_item.created_at).to eql(now)
 
@@ -19,11 +19,11 @@ EOF
 
 planAnnotationFile="plan.html"
 cat > "$planAnnotationFile" <<-EOF
-    <pre class="term">
+    <summary><details><pre class="term">
     <code>
         Hello.
     </code>
-    </pre>
+    </pre></summary></details>
 EOF
 
 buildkite-agent annotate \
