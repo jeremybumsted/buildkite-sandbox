@@ -8,12 +8,12 @@ project=${BUILDKITE_PIPELINE_SLUG}
 code_fence="\`\`\`"
 
 planAnnotationFile="plan.html"
-    cat > "$planAnnotationFile" <<- EOM
+    cat > "$planAnnotationFile" <<EOM
 # <h4>terraform/$project Terraform plan</h4>
 <details>
-${code_fence}term
-     $(cat plan.log)
-${code_fence}
+    ${code_fence}term
+    $(cat plan.log)
+    ${code_fence}
 </details>
 EOM
 
