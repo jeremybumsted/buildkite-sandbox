@@ -9,12 +9,11 @@ code_fence="\`\`\`"
 
 planAnnotationFile="plan.html"
     cat > "$planAnnotationFile" <<EOM
-# <h4>terraform/$project Terraform plan</h4>
-<details>
+    <h4>terraform/$project Terraform plan</h4>
     ${code_fence}term
     $(cat plan.log)
     ${code_fence}
-</details>
+
 EOM
 
     buildkite-agent annotate \
