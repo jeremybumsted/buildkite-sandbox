@@ -17,11 +17,19 @@ tfplan=$(cat <<EOF
 EOF
 )
 
-planAnnotationFile="plan"
-cat > "$planAnnotationFile" <<EOF
-    
+planAnnotationFile="plan.html"
+cat > "$planAnnotationFile" <<-EOF
+    <pre class="term">
+    <code>
+        Hello.
+    </code>
+    </pre>
 EOF
 
-   echo "$tfplan" | buildkite-agent annotate \
+buildkite-agent annotate \
       --style "info" \
-      --context "ctx-plan-$project"
+      --context "ctx-plan-$project" < $planAnnotationFile
+
+echo "$tfplan" | buildkite-agent annotate \
+    --style "success" \
+    --context "ctx-test"
