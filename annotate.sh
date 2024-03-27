@@ -1,7 +1,6 @@
 #!/bin/bash
 
 annotation=$(cat << EOF
-   <h4>terraform/aws-eu Terraform plan</h4>
    \`\`\`term
    Terraform used the selected providers to generate the following execution
    plan. Resource actions are indicated with the following symbols:
