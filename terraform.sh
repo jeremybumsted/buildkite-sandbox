@@ -33,3 +33,5 @@ buildkite-agent annotate \
 echo "$tfplan" | buildkite-agent annotate \
     --style "success" \
     --context "ctx-test"
+
+echo -e "\`\`\`term\nThis is a \033[0;31mtest\033[0m\n\`\`\`" | buildkite-agent annotate --style="warning"
