@@ -7,7 +7,11 @@ project=${BUILDKITE_PIPELINE_SLUG}
 
 planAnnotationFile="plan.html"
     cat > "$planAnnotationFile" <<MARKDOWN
-        \`\`\`term Hello \`\`\`
+        <pre class="term">
+            <code>
+            Hello
+            </code>
+        </pre>
 MARKDOWN
 
     buildkite-agent annotate \
