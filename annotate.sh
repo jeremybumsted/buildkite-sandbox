@@ -243,7 +243,7 @@ body=$(cat << EOF
 EOF
 )
 
-html_body=$(terminal-to-html < "$body")
+html_body=$(echo "$body" | terminal-to-html)
 
 annotation=$(cat << EOF
 
