@@ -7,7 +7,8 @@ project=${BUILDKITE_PIPELINE_SLUG}
 
 planAnnotationFile="plan.html"
     cat > "$planAnnotationFile" <<MARKDOWN
-        ###Checking out this plan
+        \`\`\`term Hello \`\`\`
+        Terraform says this is the plan:
         \`\`\`term
             $(cat plan.log)
         \`\`\`
